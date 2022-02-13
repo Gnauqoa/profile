@@ -1,0 +1,43 @@
+@import '../../../Theme.scss';
+
+.BoxBorderAnimation{
+    position: relative;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(0,0,0);
+    overflow: hidden;
+    border-radius: 20px;
+    .Content{
+   
+        z-index: 3;
+
+    }
+}
+.BoxBorderAnimation::before{
+    content: "";
+    position: absolute;
+    width: 15%;
+    height: 270%;
+    background: linear-gradient(#00ccff, #d400d4);
+    animation: animated 4s linear infinite;
+}
+.BoxBorderAnimation::after{
+    content: "";
+    position: absolute;
+    inset: 4px;
+    background-color: $mainColor;
+    border-radius: 16px; 
+}
+@keyframes animated {
+    0%
+    {
+        transform:  rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,38 @@
+@import '../../Theme.scss';
+
+.Menu{
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    background-color: white;
+    top: 0;
+    right: -400px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+
+    &.active{
+        right: 0;
+        background-color: $mainColor;
+    }
+
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 30px;
+        font-weight: 300;
+        color: white;
+        width: 60%;
+    }
+    p{
+        cursor: pointer;
+        margin-bottom: 70px;
+        &:hover{
+            font-weight: 500;
+        }
+    }
+    
+}

@@ -1,0 +1,29 @@
+@import '../../Theme.scss';
+.Intro{
+    background-color: $mainColor;
+    display: grid;
+    flex-direction: row;
+    padding-top: 11%;
+    padding-left: 15%;
+    padding-bottom: 10%;
+    grid-template-columns: 548px 400px;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    .main{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .text{
+            font-size: 24px;
+            line-height: 40px;
+            font-weight: 300;
+            padding: 4%;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+    }
+   
+
+}

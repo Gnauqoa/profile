@@ -1,0 +1,14 @@
+@import "../../Theme.scss";
+
+.Timeline{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    .TitleTimeLine{
+        font-size: 50px;
+        color: #fff;
+    }
+}
