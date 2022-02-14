@@ -1,3 +1,17 @@
+@import "../../Theme.scss";
+
 .Project{
-    background-color: antiquewhite;
+  
+    .main{
+        > *{
+            margin-bottom: 50px;
+        }
+
+        .Used{
+            flex-direction: row;
+            display: flex;
+            padding-left: 15px;
+            padding-bottom: 15px;
+        }
+    }
 }

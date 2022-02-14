@@ -4,7 +4,20 @@ import '../../Assets/Image.js';
 import Icon from '../Order/Icon/Icon.js'
 import {moveUnderlineWhenScroll} from '../Topbar/Topbar.js';
 import {Html,Css,Javascript,Cplusplus,Csharp,ReactLogo,Nodejs,Arduino}  from '../../Assets/Image.js'
-const ListSkills = [
+
+export default function Skills() {
+    return (
+        <div onPointerEnter = {(e) => moveUnderlineWhenScroll(e)} className = 'Skills Section ' id = 'Skills'>
+            <p className = 'title'>Skills</p>
+            <div className = 'SectionRow'>
+                {ListSkills.map((data) => 
+                    <Icon style = {{width: "150px", height: "150px"}} src={data.src} url = {data.url} spin = {data.spin}/>
+                )}
+            </div>
+        </div>
+    )
+}
+export const ListSkills = [
     {
         src: Cplusplus,
         url: "https://www.cplusplus.com/"
@@ -42,15 +55,3 @@ const ListSkills = [
         spin: 1
     }, 
 ];
-export default function Skills() {
-    return (
-        <div onPointerEnter = {(e) => moveUnderlineWhenScroll(e)} className = 'Skills Section ' id = 'Skills'>
-            <p className = 'title'>Skills</p>
-            <div className = 'SectionRow'>
-                {ListSkills.map((data) => 
-                    <Icon src={data.src} url = {data.url} spin = {data.spin}/>
-                )}
-            </div>
-        </div>
-    )
-}

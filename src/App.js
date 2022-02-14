@@ -1,7 +1,7 @@
 import './App.scss'
 import {Topbar} from './Components/Topbar/Topbar.js'
 import Profile from './Components/Profile/Profile.js'
-import Achievements from './Components/Project/Project.js'
+import Project from './Components/Project/Project.js'
 import Skills from './Components/Skills/Skills.js'
 import Contact from './Components/Contact/Contact.js'
 import {useState} from 'react'
@@ -14,8 +14,8 @@ function App() {
       <div className="sections">
         <Profile />
         <Skills/>
-        <Achievements/>
-        <Contact/>
+        <Project/>
+        {/* <Contact/> */}
       </div> 
     </div>
     
