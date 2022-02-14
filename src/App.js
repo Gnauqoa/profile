@@ -1,6 +1,5 @@
 import './App.scss'
 import {Topbar} from './Components/Topbar/Topbar.js'
-import Intro from './Components/Intro/Intro.js'
 import Profile from './Components/Profile/Profile.js'
 import Achievements from './Components/Project/Project.js'
 import Skills from './Components/Skills/Skills.js'
@@ -13,10 +12,9 @@ function App() {
     <div className="App">
       <Topbar open = {openTopBar} setOpen={ setOpenTopBar}/>
       <div className="sections">
-        <Intro />
         <Profile />
-        <Achievements/>
         <Skills/>
+        <Achievements/>
         <Contact/>
       </div> 
     </div>

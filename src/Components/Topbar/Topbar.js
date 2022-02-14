@@ -14,18 +14,19 @@ function Topbar({open,setOpen}) {
     return (
         <div className={"topbar " + (!open && "active")}>
             <div className="wrapper">                   
-                <p className="logo">Welcome</p>
+                <p className="logo"></p>
                 <div className="left">
                     <div className="underline" id = "underline" ></div>
                     <div className="itemContainerTopbar">
                             <a href="#Profile" >Profile</a>
                     </div>
                     <div className="itemContainerTopbar">
-                            <a href="#Project">Project</a>
-                    </div>
-                    <div className="itemContainerTopbar">
                             <a href="#Skills">Skills</a>
                     </div>
+                    <div className="itemContainerTopbar">
+                            <a href="#Project">Project</a>
+                    </div>
+              
                     <div className="itemContainerTopbar">
                             <a href="#Contact">Contact</a>
                     </div>

@@ -1,0 +1,31 @@
+@import '../../../Theme.scss';
+.Icon{
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+    align-items: center;
+    width: 130px;
+    height: 130px;
+    cursor: pointer;
+    transition: width 0.5s;
+    transition: height 0.5s;
+    img {
+        height: 100%;
+        width: auto;
+    }
+}
+.Icon:hover{
+    width: 150px;
+    height: 150px;
+}
+.Icon.spin{
+    animation: spinAnimation 10s linear infinite;
+}
+@keyframes spinAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
