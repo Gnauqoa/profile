@@ -26,10 +26,6 @@ function Topbar({open,setOpen}) {
                     <div className="itemContainerTopbar">
                             <a href="#Project">Project</a>
                     </div>
-              
-                    <div className="itemContainerTopbar">
-                            <a href="#Contact">Contact</a>
-                    </div>
                 </div>
          
             

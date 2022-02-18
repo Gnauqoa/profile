@@ -1,28 +1,4 @@
-@import '../../Theme.scss';
-.Profile{
-    background-color: $mainColor;
-    display: grid;
-    flex-direction: row;
-    padding-top: 11%;
-    padding-left: 15%;
-    grid-template-columns: 650px 400px;
-    position: relative;
-    margin: 0 auto;
-    overflow: hidden;
-    .main{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-
-        .text{
-            font-size: 24px;
-            line-height: 40px;
-            font-weight: 300;
-            padding: 4%;
-            color: $textColor1;
-        }
-        
-    }
-   
-
+@import '../Theme/Theme.scss';
+#Profile{
+    padding-top: 200px;
 }

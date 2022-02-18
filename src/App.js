@@ -3,7 +3,6 @@ import {Topbar} from './Components/Topbar/Topbar.js'
 import Profile from './Components/Profile/Profile.js'
 import Project from './Components/Project/Project.js'
 import Skills from './Components/Skills/Skills.js'
-import Contact from './Components/Contact/Contact.js'
 import {useState} from 'react'
 function App() {
 
@@ -15,7 +14,6 @@ function App() {
         <Profile />
         <Skills/>
         <Project/>
-        {/* <Contact/> */}
       </div> 
     </div>
     

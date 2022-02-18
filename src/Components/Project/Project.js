@@ -4,6 +4,39 @@ import Icon from '../Order/Icon/Icon.js'
 import {moveUnderlineWhenScroll} from '../Topbar/Topbar.js';
 import BoxBorderAnimation from '../Order/BoxBorderAnimation/BoxBorderAnimation';
 import {ListSkills} from '../Skills/Skills.js'
+import {Section,SectionTitle,SectionText} from "../Theme/Theme.js"
+
+export default function Project() {
+    return (
+        <Section onPointerEnter = {(e) => moveUnderlineWhenScroll(e)} id = "Project">
+            <SectionTitle>Project</SectionTitle>
+            <Section className = "ProjectList">
+                {ProjectList.map((data) => 
+                    <BoxBorderAnimation>
+                        <SectionText>
+                            <p className ="ProjectTitle">{data.name}</p>
+                            <br/>- Description: {data.description}
+                            <br/>- Link: <a href={data.url}  rel="noreferrer" target = "_blank" >here</a> 
+                        </SectionText>
+                        <Section className="ProjectUsed" row = "1" background = "translate">
+                            {data.used.map((us)=> 
+                                <Icon src = {us.src} url = {us.url}/>
+                            )}
+                        </Section>
+                    </BoxBorderAnimation>
+                )}
+            </Section>
+        </Section>
+    )
+}
+function createProject(name, description, url, used){
+    return {
+        name: name,
+        description: description,
+        url: url,
+        used: used
+    }
+}
 const Cplusplus = ListSkills[0];
 const Csharp = ListSkills[1];
 const Arduino = ListSkills[2];
@@ -31,41 +64,6 @@ const ProjectList = [
     ),
 
 ]
-export default function Project() {
-    console.log(Cplusplus);
-    return (
-        <div onPointerEnter = {(e) => moveUnderlineWhenScroll(e)} className = "Section Project " id = "Project">
-            <p className = "title">Project</p>
-            <div className = "Section main">
-                {ProjectList.map((data) => 
-                    <BoxBorderAnimation>
-                        <p className='SectionText'>
-                            - Name: {data.name}
-                            <br/>- Description: {data.description}
-                            <br/>- Link: <a href={data.url}  rel="noreferrer" target = "_blank" >here</a>
-                            <br/>     
-                        </p>
-                        <div className = "Used">
-                            {data.used.map((us)=> 
-                                <Icon src = {us.src} url = {us.url}/>
-                            )}
-                        </div>
-                    
-                    </BoxBorderAnimation>
-                )}
-            </div>
-        </div>
-    )
-}
-function createProject(name, description, url, used){
-    return {
-        name: name,
-        description: description,
-        url: url,
-        used: used
-    }
-}
-
 
 
 
