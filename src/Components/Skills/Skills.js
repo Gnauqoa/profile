@@ -4,17 +4,18 @@ import '../../Assets/Image.js';
 import Icon from '../Order/Icon/Icon.js'
 import {moveUnderlineWhenScroll} from '../Topbar/Topbar.js';
 import {Html,Css,Javascript,Cplusplus,Csharp,ReactLogo,Nodejs,Arduino}  from '../../Assets/Image.js'
+import {Section,SectionTitle,SectionText} from "../Theme/Theme.js"
 
 export default function Skills() {
     return (
-        <div onPointerEnter = {(e) => moveUnderlineWhenScroll(e)} className = 'Skills Section ' id = 'Skills'>
-            <p className = 'title'>Skills</p>
-            <div className = 'SectionRow'>
+        <Section onPointerEnter = {(e) => moveUnderlineWhenScroll(e)} id = 'Skills'>
+            <SectionTitle>Skills</SectionTitle>
+            <Section row = {1}>
                 {ListSkills.map((data) => 
                     <Icon style = {{width: "150px", height: "150px"}} src={data.src} url = {data.url} spin = {data.spin}/>
                 )}
-            </div>
-        </div>
+            </Section>
+        </Section>
     )
 }
 export const ListSkills = [
